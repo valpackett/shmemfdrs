@@ -1,0 +1,17 @@
+[package]
+name = "shmemfdrs"
+version = "0.0.0"
+authors = [ "Greg V <greg@unrelenting.technology>", "The Servo Project Developers" ]
+keywords = [ "memfd", "SHM_ANON", "Shared Memory" ]
+categories = [ "os::unix-apis" ]
+description = "Creates anonymous shared memory file descriptors for IPC on Unix platforms, using memfd/SHM_ANON/shm_open."
+license = "MIT/Apache-2.0"
+homepage = "https://github.com/myfreeweb/shmemfdrs"
+repository = "https://github.com/myfreeweb/shmemfdrs"
+
+[dependencies]
+libc = "0.2.34"
+syscall = { version = "0.2.1", optional = true }
+
+[features]
+memfd = ["syscall"]
