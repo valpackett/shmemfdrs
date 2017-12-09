@@ -1,6 +1,6 @@
 [package]
 name = "shmemfdrs"
-version = "0.0.0"
+version = "0.1.0"
 authors = [ "Greg V <greg@unrelenting.technology>", "The Servo Project Developers" ]
 keywords = [ "memfd", "SHM_ANON", "Shared Memory" ]
 categories = [ "os::unix-apis" ]
