@@ -1,7 +1,7 @@
 extern crate libc;
 #[cfg(all(feature="memfd", target_os="linux"))]
 #[macro_use]
-extern crate syscall;
+extern crate sc;
 
 use std::ffi::CStr;
 use libc::{c_int, off_t};
