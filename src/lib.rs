@@ -1,7 +1,4 @@
 extern crate libc;
-#[cfg(all(feature="memfd", target_os="linux"))]
-#[macro_use]
-extern crate sc;
 
 use std::ffi::CStr;
 use libc::{c_int, off_t};
@@ -43,7 +40,7 @@ pub fn create_shmem<T: AsRef<CStr>>(name: T, length: usize) -> c_int {
 
 #[cfg(all(feature="memfd", target_os="linux"))]
 unsafe fn memfd_create(name: *const libc::c_char, flags: usize) -> c_int {
-    syscall!(MEMFD_CREATE, name, flags) as c_int
+    libc::syscall(libc::SYS_memfd_create, name, flags) as c_int
 }
 
 #[cfg(test)]
