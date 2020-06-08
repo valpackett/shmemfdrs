@@ -10,8 +10,7 @@ homepage = "https://github.com/myfreeweb/shmemfdrs"
 repository = "https://github.com/myfreeweb/shmemfdrs"
 
 [dependencies]
-libc = "0.2"
-sc = { version = "0.2", optional = true }
+libc = "0.2.33"
 
 [features]
-memfd = ["sc"]
+memfd = []
