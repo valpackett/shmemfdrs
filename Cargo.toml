@@ -8,6 +8,7 @@ description = "Creates anonymous shared memory file descriptors for IPC on Unix 
 license = "MIT/Apache-2.0"
 homepage = "https://github.com/myfreeweb/shmemfdrs"
 repository = "https://github.com/myfreeweb/shmemfdrs"
+edition = "2018"
 
 [dependencies]
 libc = "0.2.33"
